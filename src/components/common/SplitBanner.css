@@ -1,0 +1,80 @@
+.split-banner {
+  position: relative;
+  margin: 40px 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.split-banner-image {
+  width: 100%;
+  display: block;
+}
+
+.split-banner-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 5%;
+}
+
+.split-banner-text {
+  text-align: right;
+  color: #8a2be2;
+}
+
+.split-banner-text h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.split-banner-text h3 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.split-banner-text p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.shop-now-btn {
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #7722cc;
+}
+
+@media (max-width: 768px) {
+  .split-banner-content {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .split-banner-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .split-banner-text h3 {
+    font-size: 1.4rem;
+  }
+  
+  .split-banner-text p {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,446 @@
+.homepage {
+  min-height: 100vh;
+  background: #f8f9fa;
+  direction: rtl;
+}
+
+.main-content {
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Styles */
+.categories-section,
+.products-section,
+.promo-banners {
+  margin: 40px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Grid Layouts */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Health Goals Section */
+.health-goals-section {
+  padding: 30px 0;
+  background-color: #f8f9fa;
+}
+
+.health-goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.health-goal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.health-goal-image {
+  height: 100%;
+  overflow: hidden;
+}
+
+.health-goal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.health-goal-card:hover .health-goal-image img {
+  transform: scale(1.05);
+}
+
+.health-goal-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8B5CF6;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.health-goal-title {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Products Section - Only keeping section styling */
+.products-section {
+  padding: 40px 0;
+  background: white;
+}
+
+/* Product-related styles have been moved to ProductCard.css */
+
+/* Promotional Banners */
+.promo-banners {
+  padding: 40px 0;
+  background: #f8f9fa;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.promo-banner {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.promo-banner:hover {
+  transform: translateY(-2px);
+}
+
+.promo-banner.large {
+  height: 200px;
+}
+
+.promo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(139, 92, 246, 0.8), rgba(168, 85, 247, 0.6));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.promo-overlay h3,
+.promo-overlay h4 {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.promo-overlay h3 {
+  font-size: 24px;
+}
+
+.promo-overlay h4 {
+  font-size: 18px;
+}
+
+.promo-overlay p {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.promo-overlay .discount {
+  font-size: 32px;
+  font-weight: 900;
+  color: #FFD700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.promo-banner-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.promo-banner.small {
+  height: 150px;
+}
+
+.promo-banner.small .promo-overlay h4 {
+  font-size: 14px;
+}
+
+.promo-banner.small .promo-overlay p {
+  font-size: 12px;
+}
+
+.promo-banner.small .promo-overlay .discount {
+  font-size: 24px;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 50%, #C084FC 100%);
+  color: white;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/api/placeholder/1200/400') center/cover;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-main-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-number {
+  font-size: 120px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1;
+}
+
+.hero-title-group h1,
+.hero-title-group h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.discount-percent {
+  font-size: 32px;
+  font-weight: 900;
+  color: #FFD700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-side-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-promo-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  max-width: 400px;
+}
+
+.promo-card-small {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.promo-card-small:hover {
+  transform: translateY(-2px);
+}
+
+.promo-card-small img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.promo-card-small span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8B5CF6;
+}
+
+/* Section divider to match screenshot UI accent */
+.section-header::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin: 10px auto 0;
+  background: var(--primary);
+  border-radius: 999px;
+}
+
+/* Theme variables for consistent violet accent */
+:root {
+  --primary: #7c3aed; /* violet-600 */
+  --primary-dark: #6d28d9; /* violet-700 */
+  --text: #111827;
+  --muted: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 24px;
+  }
+  
+  .section-header p {
+    font-size: 14px;
+  }
+  
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .promo-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .promo-banner-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-main-text {
+    justify-content: center;
+  }
+  
+  .hero-number {
+    font-size: 80px;
+  }
+  
+  .health-goals-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  .health-goal-image {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 15px 0;
+  }
+  
+  .categories-section,
+  .products-section,
+  .promo-banners {
+    margin: 30px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 20px;
+  }
+  
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .promo-banner-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-number {
+    font-size: 60px;
+  }
+  
+  .health-goals-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .health-goal-image {
+    height: 140px;
+  }
+  
+  .health-goal-title {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
