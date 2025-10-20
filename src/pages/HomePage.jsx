@@ -3,7 +3,6 @@ import { useAppDispatch, useAppSelector } from '../hooks/redux';
 import { fetchCategories } from '../store/slices/categorySlice';
 import { fetchBrands } from '../store/slices/brandSlice';
 import { getLocalizedCategoryName, getLocalizedCategoryImage, getLocalizedBrandName } from '../utils/api';
-import { Helmet } from 'react-helmet-async';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import HeroSlider from '../components/layout/HeroSlider';
@@ -48,12 +47,6 @@ const HomePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>iVita - متجر الفيتامينات والمكملات الغذائية</title>
-        <meta name="description" content="تسوق أفضل الفيتامينات والمكملات الغذائية من iVita بأسعار تنافسية وتوصيل سريع لجميع أنحاء المملكة" />
-        <meta name="keywords" content="فيتامينات, مكملات غذائية, صحة, عناية, منتجات طبيعية, iVita" />
-        <link rel="canonical" href="https://ivita.com/" />
-      </Helmet>
       <div className="homepage">
         <Header />
       
